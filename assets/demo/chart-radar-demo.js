@@ -9,7 +9,7 @@ var ctx = document.getElementById('radar-chart').getContext('2d');
 			data: {
 				labels: ['Edad Esposa', 'Educación del esposo', 'Educación esposa', 'Numero de hijos', 'indice de nivel de vida'],
 				datasets: [{
-					label: 'Vehicle 1',
+					label: '',
 					data: [3000, 2, 1, 3, 2015],
 					backgroundColor: 'rgba(255, 99, 132, 0.2)',
 					borderColor: 'rgba(255, 99, 132, 1)',
