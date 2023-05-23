@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Register - SB Admin</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-gradient-primary">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Bienvenidos</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn bg-btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="index.html" onclick="eliminarSession()">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark bg-primary bg-gradient-primary" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Paginas
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="noticias.html">Sobre Nosotros</a>
+                                    <a class="nav-link" href="arbol-decision.html">Arbol de Decisiones</a>
+                                    <a class="nav-link" href="CRISP-DM.html">CRISP-DM</a>
+                                    <a class="nav-link" href="predecir.html">Predecir</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link" href="reportes-users.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Reportes de Usuarios
+                            </a>
+                            
+                            <a class="nav-link" href="tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Reportes
+                            </a>
+                            <a class="nav-link" href="soporte.html">
+                              <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                              Contactanos
+                          </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <br>
+                            <br>
+                            <br>
+                            <h1 class="text-center">
+                                Arbol de decisión.
+                            </h1>
+                            <p>
+Árbol de decisión o Decisión Tree Classification es un tipo de algoritmo de aprendizaje supervisado que se utiliza principalmente en problemas de clasificación, aunque funciona para variables de entrada y salida categóricas como continuas.
+En esta técnica, dividimos la data en dos o más conjuntos homogéneos basados en el diferenciador más significativos en las variables de entrada. El árbol de decisión identifica la variable más significativa y su valor que proporciona los mejores conjuntos homogéneos de población. Todas las variables de entrada y todos los puntos de división posibles se evalúan y se elige la que tenga mejor resultado.
+Los algoritmos de aprendizaje basados en árbol se consideran uno de los mejores y más utilizados métodos de aprendizaje supervisado. Los métodos basados en árboles potencian modelos predictivos con alta precisión, estabilidad y facilidad de interpretación. A diferencia de los modelos lineales, mapean bastante bien las relaciones no lineales.
+
+                            </p>
+
+<h2>Ventajas.</h2>
+<p>
+Las ventajas que tiene este tipo de algoritmo son:
+Fácil de entender. La salida del árbol de decisión es muy fácil de entender, incluso para personas con antecedentes no analíticos, no se requiere ningún conocimiento estadístico para leerlos e interpretarlos.
+Útil en la exploración de datos. El árbol de decisión es una de las formas más rápidas para identificar las variables más significativas y la relación entre dos o más. Con la ayuda de los árboles de decisión podemos crear nuevas variables o características que tengan mejor poder para predecir la variable objetivo.
+Se requiere menos limpieza de datos. Requiere menos limpieza de datos en comparación con algunas otras técnicas de modelado. A su vez, no está influenciado por los valores atípicos y faltantes en la data.
+El tipo de datos no es una restricción. Puede manejar variables numéricas y categóricas.
+Método no paramétrico. Es considerado un método no paramétrico, esto significa que los árboles de decisión no tienen suposiciones sobre la distribución del espacio y la estructura del clasificador.
+</p>
+
+<h2>Desventajas.</h2>
+<p>
+Ya vista las ventajas, ahora se deben mencionar las desventajas que posee este algoritmo:
+Sobreajuste. Es una de las dificultades más comunes que tiene este algoritmo, este problema se resuelve colocando restricciones en los parámetros del modelo y eliminando ramas en el análisis.
+Los modelos basados en árboles no están diseñados para funcionar con características muy dispersas. Cuando se trata de datos de entrada dispersos (por ejemplo, características categóricas con una gran dimensión), podemos pre procesar las características dispersas para generar estadísticas numéricas, o cambiar a un modelo lineal, que es más adecuado para dichos escenarios.
+4.Símbolos y características del árbol de decisión
+Esta metodología tiene una simbología sencilla para simplificar tu diagrama de árbol de decisiones.
+Está basado en nodos. Un nodo por definición es un punto fijo, una terminal en un cuerpo físico. En estadística, se ha usado este término para definir los diferentes puntos que conectan espacios con características similares.
+Éstos son:
+Cuadrado: Se utiliza para representar un nodo de decisión. Es el inicio de tu árbol de decisión. Es la decisión que se va a evaluar.
+Líneas: Son ramificaciones alternativas. Cada una se desprende del nodo de decisión. Muestran y enlazan los posibles resultados o requerimiento de acciones.
+Círculo: Representa a los nodos de oportunidad. Son las probabilidades del nodo de decisión.
+Triángulo: Nodos terminales o finales. Cada uno es el resultado final de una decisión.
+Esta estructura te permite plantear problemas, analizar todas las alternativas posibles, evaluar los eventos o hechos resultantes de cada ejercicio, y así, cuantificar el resultado para determinar la probabilidad de uso.
+</p>
+
+<p>
+    Ten presente que cada figura se complementa con notas detalladas puntuales y relevantes, para el análisis y mostrar las pérdidas y ganancias.
+</p>
+
+
+<h2>Cómo se aplica árbol de decisiones y validar su funcionamiento.</h2> 
+<p>
+Es muy fácil hacer el árbol de decisiones, para mostrarte cómo hacerlo, utilizaremos un ejemplo o posible escenario de una empresa.
+<br>
+<br>
+Aquí te mostramos cómo hacer un árbol de decisiones, en cinco pasos sencillos, para que puedas aprovechar todos los beneficios de esta metodología:
+<br>
+<br>
+5.1      Empieza con una idea o decisión:
+<br>
+<br>
+Escribe tu nodo de decisión. 
+<br>
+<br>
+Esta es tu idea principal. 
+<br>
+<br>
+El concepto inicial de la decisión que tomarás. 
+<br>
+<br>
+Digamos: Abrir una nueva línea de negocio.
+<br>
+<br>
+5.2      Agrega nodos de oportunidad y de decisión:
+<br>
+<br>
+Aquí empieza tu ramificación. Utiliza las líneas que se desprenden de tu nodo de decisión, hacia tus nodos de oportunidad. Estas son las acciones posibles. En el ejemplo anterior, se desprenden tres opciones:
+<br>
+<br>
+	•	Establecer una nueva línea con un producto existente.
+    <br>
+    <br>
+	•	Desarrollar un nuevo producto.
+    <br>
+    <br>
+	•	Desarrollar un nuevo servicio.
+    <br>
+    <br>
+5.3      Expande y abarca todas las decisiones y resultados posibles:
+<br>
+<br>
+Cada nodo de oportunidad va a requerir ramificaciones de cada posibilidad nueva que surja contemplando cada una. 
+<br>
+<br>
+Asegúrate de abarcarlas ampliamente, ya que de esto depende el éxito de tu análisis.
+<br>
+<br>
+En el mismo ejemplo podríamos ver que para el nodo de decisión “establecer una nueva línea con un producto existente”, se desprenden otras probabilidades, tales como:
+<br>
+<br>
+	•	Crema de manos.
+    <br>
+    <br>
+	•	Loción para hombre.
+    <br>
+    <br>
+	•	Polvo compacto.
+    <br>
+    <br>
+Y a su vez, se desprenden otros nódulos de decisión:
+<br>
+<br>
+	•	Talleres en línea.
+    <br>
+    <br>
+	•	Talleres presenciales.
+    <br>
+    <br>
+5.4      Calcular y medir datos:
+<br>
+<br>
+Es muy importante que dotes de toda la información detallada con cifras, costos y datos relevantes a cada nodo de decisión. Así verdaderamente podrás realizar un análisis completo.
+Esto requiere acciones reales que podrás plasmar en el papel. Asegúrate de que la información esté lo más completa y puntual posible, para añadirla a tu árbol de decisión.
+Utiliza las ramificaciones para extender el diagrama de flujo de tal forma que tu árbol se nutra en cada rama y proporcione una perspectiva completa de la inversión y ganancias.
+Utiliza la siguiente fórmula para calcular el valor esperado:
+<br>
+<br>
+Valor esperado (EV) = (primer resultado posible x probabilidad del resultado) + (segundo resultado posible x probabilidad del resultado) – costo
+<br>
+<br>
+
+Así pues, en el mismo ejemplo, tendríamos:
+<br>
+<br>
+Crema de manos: 
+<br>
+<br>
+	•	Ventas 2021: 50 millones de dólares.
+    <br>
+<br>
+	•	Utilidad: 2%.
+    <br>
+<br>
+	•	Clientes: 76.000
+    <br>
+<br>
+Loción para hombre:
+<br>
+<br>
+	•	Ventas 2021: 65 millones de dólares.
+    <br>
+<br>
+	•	Utilidad 8%.
+    <br>
+<br>
+	•	Clientes: 56.000
+    <br>
+<br>
+Polvo compacto:
+<br>
+<br>
+	•	Ventas 2022 (5 meses): 20 millones de dólares.
+    <br>
+<br>
+	•	Utilidad 7%.
+    <br>
+<br>
+	•	Clientes: 70.000
+    <br>
+<br>
+
+
+Para los otros nódulos de decisión:
+<br>
+<br>
+
+Talleres en línea:
+<br>
+<br>
+	•	Valor por curso: $10 usd
+    <br>
+<br>
+	•	Costos:
+    <br>
+<br>
+Costo de inversión único: $4.000 usd
+<br>
+<br>
+Costo mensual: $500 usd = $6.000 anual
+<br>
+<br>
+Total, año= $10.000 usd
+<br>
+<br>
+	•	Valor estimado:
+    <br>
+<br>
+EV = [$10 usd (valor por taller) x 760 (1% de los clientes de la crema)] + [$10 usd (valor por taller) x 560 (1% de los clientes de la loción)] + [$10 usd (valor por taller) x 700 (1% de los clientes del polvo compacto)] – $10.000 usd (costo anual)
+<br>
+<br>
+EV= ($7.600 + $5.600 + $7.000) – $10.000
+<br>
+<br>
+EV= $23.200 – $10.000
+<br>
+<br>
+EV= $13.200 usd
+<br>
+<br>
+Talleres presenciales:
+<br>
+<br>
+	•	Valor por curso: $30 usd
+    <br>
+<br>
+	•	Costos:
+    <br>
+<br>
+Costo de inversión inicial: $30.000 usd
+<br>
+<br>
+Costo mensual: $1.500 usd = $18.000 usd anual
+<br>
+<br>
+Total costos: $48.000 usd
+<br>
+<br>
+	•	Valor estimado:
+    <br>
+<br>
+EV= [(30 x 760) + (30 x 560) + (30 x 700)] – 48.000
+<br>
+<br>
+EV= (22.800 + 16.800 + 21.000) – 48.000
+<br>
+<br>
+EV= 60.600 – 48.000
+<br>
+<br>
+EV= $12.600
+<br>
+<br>
+
+Se escribe solo los datos puntuales para cada ramificación en acciones, costos y valores numéricos y extiéndete en cada ramificación como se requiera para dar el panorama completo.
+<br>
+<br>
+
+
+5.5      Conclusiones y resultados:
+<br>
+<br>
+Evalúa toda la información de tus nódulos anteriores y determina los nodos finales para cada ramificación.
+En el caso anterior, tus nódulos finales serían:
+Establecer talleres virtuales y presenciales.
+Continuar con las ventas de productos.  
+Recuerda concretar el ejercicio con los otros nodos de oportunidad.
+¡Ahora sí! Con tu árbol de decisiones, evaluar tus ideas y proyectos es mucho más fácil y rápido.
+Aterriza tus problemas y soluciones con este diagrama.
+
+<br>
+<br>
+
+</p>
+
+
+<h2>Referencias Bibliográficas</h2>
+<br>
+<br>
+
+<a href="https://aprendeia.com/aprendizaje-supervisado-decision-tree-classification/" class="text-color-primary" >https://aprendeia.com/aprendizaje-supervisado-decision-tree-classification/</a>
+<a href="https://excelparatodos.com/arbol-de-decisiones/" class="text-color-primary">https://excelparatodos.com/arbol-de-decisiones/</a>
+
+
+                            </p>
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted"></div>
+                            <div>
+                                <a href="https://www.chevrolet.com.co/" class="text-color-primary">Andrea Arevalo - Jesus Niño - Jeison Galeado - Victor Arzuza</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
